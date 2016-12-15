@@ -1,6 +1,10 @@
 {
   "name": "friend-finder",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mqschwanda/RCB-Friend-Finder.git"
+  },
   "description": "Compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site takes in results from users' surveys, then compares their answers with those from other users. The app then displays the name and picture of the user with the best overall match.",
   "main": "server.js",
   "scripts": {

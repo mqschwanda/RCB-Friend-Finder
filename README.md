@@ -1,5 +1,8 @@
 # Friend Finder - Node and Express Servers
 
+* Code: [Github](https://github.com/mqschwanda/RCB-Friend-Finder)  
+* Demo: [Heroku](https://rcb-friend-finder.herokuapp.com/)
+
 ### Quick Start
 ```
 git clone https://github.com/mqschwanda/RCB-Friend-Finder.git
