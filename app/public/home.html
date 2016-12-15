@@ -1,43 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>FriendFinder</title>
-
-	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-	<!-- Font Awesome Glyphicons -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
+  <meta charset="utf-8">
+  <title>Friend Finder: Home</title>
+  <meta name="description" content="Compatibility-based 'FriendFinder' application -- basically a dating app. This full-stack site takes in results from users' surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match.">
+  <meta name="author" content="MQSchwanda">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <!-- PARALAX STYLE -->
+  <style>
+    p {
+      line-height: 2rem;
+    }
+    .parallax-container {
+      min-height: 300px;
+      line-height: 0;
+      height: auto;
+      color: rgba(255,255,255,.9);
+    }
+    .parallax-container .section {
+      width: 100%;
+    }
+    .white-text {
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+    @media only screen and (max-width : 992px) {
+      .parallax-container .section {
+        position: absolute;
+        top: 40%;
+      }
+      #index-banner .section {
+        top: 10%;
+      }
+    }
+    @media only screen and (max-width : 600px) {
+      #index-banner .section {
+        top: 0;
+      }
+    }
+    .icon-block {
+      padding: 0 15px;
+    }
+    .icon-block .material-icons {
+      font-size: inherit;
+    }
+    footer.page-footer {
+      margin: 0;
+    }
+    #githubLink {
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body>
-
-	<div class="container">
-
-		<div class="jumbotron">
-			<h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
-			<hr>
-			<h2 class="">Answer a few basic questions. </h2>
-			<h2 class="">Then find the friend with the greatest compatibility!</h2>
-			<br>
-
-			<div class="">
-				<a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a>
-			</div>
-
-		</div>
-
-	    <footer class="footer">
-	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
-	      </div>
-	    </footer>
-
-	</div>
-
-
-</body>
+  <body class="teal lighten-1">
+    <!-- NAVBAR -->
+    <nav class="teal lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/home" class="brand-logo white-text">Friend Finder</a>
+      </div>
+    </nav>
+    <!-- TOP PARALLAX -->
+    <div id="index-banner" class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot valign">
+        <div class="container">
+          <br><br>
+          <!-- PARALLAX TEXT -->
+          <div class="row center">
+            <h5 class="header center teal-text text-lighten-1 parallax-text">Answer a few basic questions. </h5>
+            <h5 class="header center teal-text text-lighten-1 parallax-text">Then find the friend with the greatest compatibility!</h5>
+          </div>
+          <div class="row center">
+            <!-- SURVEY BUTTON -->
+            <a href="/survey" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          </div>
+          <br><br>
+        </div>
+      </div>
+      <!-- PARALLAX IMAGE -->
+      <div class="parallax"><img src="http://2.bp.blogspot.com/-EGvJSo4_JIg/VTqDRCCk_cI/AAAAAAAAJPM/O5fwMP9yvmA/s1600/millennials.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    <div class="container">
+      <!-- Icon Section -->
+      <div class="section">
+        <div class="row">
+          <!-- Find Your Next Friend -->
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center white-text"><i class="material-icons">group</i></h2>
+              <h5 class="center white-text">Find Your Next Friend</h5>
+              <p class="light white-text">Compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site takes in results from users' surveys, then compares their answers with those from other users. The app then displays the name and picture of the user with the best overall match.</p>
+            </div>
+          </div>
+          <!-- Take Our Survey -->
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center white-text"><i class="material-icons">description</i></h2>
+              <h5 class="center white-text">Take Our Survey</h5>
+              <p class="light white-text">Survey contains 10 questions with each answer on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BOTTOM PARALLAX -->
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot"></div>
+      <!-- PARALLAX IMAGE -->
+      <div class="parallax"><img src="http://www-static.se-mc.com/blogs.dir/0/files/2014/06/xperia-c3-never-miss-a-selfie-e3d47b2935602e12481706ef467c5a82-940.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="page-footer teal">
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 center-align">
+              <p><a id="githubLink" class="white-text text-darken-2" href="https://github.com/mqschwanda/RCB-Friend-Finder" target="_blank">GitHub Repo</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      (function($){
+        $(function(){
+          $('.button-collapse').sideNav();
+          $('.parallax').parallax();
+        }); // end of document ready
+      })(jQuery); // end of jQuery name space
+    </script>
+  </body>
 </html>
